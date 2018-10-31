@@ -856,11 +856,27 @@ public class Initial_page_2 extends Fragment {
 
             jsonArry1 = JSONFormBuilder.concatArray(jsonArry1);
             jsonArry2 = JSONFormBuilder.concatArray(jsonArry2);
+            jsonArry3 = JSONFormBuilder.concatArray(jsonArry3);
+            jsonArry4 = JSONFormBuilder.concatArray(jsonArry4);
+            jsonArry5 = JSONFormBuilder.concatArray(jsonArry5);
+            jsonArry6 = JSONFormBuilder.concatArray(jsonArry6);
+            jsonArry7 = JSONFormBuilder.concatArray(jsonArry7);
+            jsonArry8 = JSONFormBuilder.concatArray(jsonArry8);
+            jsonArry9 = JSONFormBuilder.concatArray(jsonArry9);
+            jsonArry10 = JSONFormBuilder.concatArray(jsonArry10);
 
             jsonArry = JSONFormBuilder.concatArray(jsonArry);
 
             jsonGroup = JSONFormBuilder.checkLength(jsonArry1, jsonGroup);
             jsonGroup = JSONFormBuilder.checkLength(jsonArry2, jsonGroup);
+            jsonGroup = JSONFormBuilder.checkLength(jsonArry3, jsonGroup);
+            jsonGroup = JSONFormBuilder.checkLength(jsonArry4, jsonGroup);
+            jsonGroup = JSONFormBuilder.checkLength(jsonArry5, jsonGroup);
+            jsonGroup = JSONFormBuilder.checkLength(jsonArry6, jsonGroup);
+            jsonGroup = JSONFormBuilder.checkLength(jsonArry7, jsonGroup);
+            jsonGroup = JSONFormBuilder.checkLength(jsonArry8, jsonGroup);
+            jsonGroup = JSONFormBuilder.checkLength(jsonArry9, jsonGroup);
+            jsonGroup = JSONFormBuilder.checkLength(jsonArry10, jsonGroup);
 
             if (jsonGroup.length() > 0) {
                 JSONObject jsonObject = new JSONObject();
