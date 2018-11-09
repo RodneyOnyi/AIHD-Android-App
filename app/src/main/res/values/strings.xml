@@ -85,11 +85,9 @@
     <string name="error_message">Please accept the terms &amp; conditions to proceed.</string>
 
     <string name="agreement">
-        <br />
-        <br />
-        <br />
-        <b>AGREEMENT</b><br />
-        Please review the privacy policy found on the <a href="https://ncdqm.tk">ncdqm.tk</a> site.
+        \n \n \n \n
+        \n<b>AGREEMENT</b>
+        \n\nPlease review the privacy policy found on the <a href="https://ncdqm.tk">ncdqm.tk</a> site.
 
         I has read and understand the above poliicy and agree to keep strictly confidential
         all confidential information received from the records of the Department of Health.
