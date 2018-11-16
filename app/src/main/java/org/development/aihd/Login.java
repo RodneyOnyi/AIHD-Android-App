@@ -60,6 +60,13 @@ public class Login extends Activity {
         inputUsername = findViewById(R.id.username);
         inputPassword = findViewById(R.id.password);
 
+        Intent sessionIntent = getIntent();
+        Boolean session = sessionIntent.getBooleanExtra("session", true);
+
+        if (!session) {
+            AppController.getInstance().getSessionManager().setLogin(false);
+        }
+
         // Check if user is already logged in or not
         if (AppController.getInstance().getSessionManager().isLoggedIn()) {
             // User is already logged in. Take him to main activity

@@ -162,6 +162,17 @@
             android:exported="false"
             android:process=":loadPatients" />
 
+        <service
+            android:name=".services.LoadAlarm"
+            android:exported="false"
+            android:process=":service" />
+
+        <!-- Receiver -->
+
+        <receiver
+            android:process=":alarm"
+            android:name=".app.ScheduledReceiver" />
+
     </application>
 
 </manifest>

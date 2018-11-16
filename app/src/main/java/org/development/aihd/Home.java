@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.View;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +18,9 @@ import com.orm.query.Select;
 import org.development.aihd.model.Forms;
 import org.development.aihd.patient.Patients;
 import org.development.aihd.common.NavigationDrawerShare;
+import org.development.aihd.services.LoadAlarm;
 import org.development.aihd.services.LoadFiles;
+
 import java.util.List;
 
 public class Home extends AppCompatActivity{
@@ -31,6 +34,9 @@ public class Home extends AppCompatActivity{
 
         NavigationDrawerShare navigate = new NavigationDrawerShare(this);
         navigate.createDrawer(toolbar);
+
+        Intent serviceAlarm = new Intent(getApplicationContext(), LoadAlarm.class);
+        startService(serviceAlarm);
 
         try {
 
@@ -80,6 +86,5 @@ public class Home extends AppCompatActivity{
 
         return super.onOptionsItemSelected(item);
     }
-
 
 }
