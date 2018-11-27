@@ -11,6 +11,7 @@ import android.widget.Toast;
 import org.development.aihd.Login;
 import org.development.aihd.R;
 import org.development.aihd.SplashActivity;
+import org.development.aihd.app.AppController;
 
 import agency.tango.materialintroscreen.MaterialIntroActivity;
 import agency.tango.materialintroscreen.MessageButtonBehaviour;
@@ -34,19 +35,21 @@ public class IntroActivity extends MaterialIntroActivity {
         addSlide(new CustomSlide());
 
         addSlide(new SlideFragmentBuilder()
-                .backgroundColor(R.color.permission_slide)
+                .backgroundColor(R.color.white)
                 .buttonsColor(R.color.permission_buttons)
                 .possiblePermissions(new String[]{})
                 .neededPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_NETWORK_STATE})
-                .image(R.drawable.choice)
+                .image(R.drawable.logo)
                 .title("Permissions required")
-                .description("please accept the requested permissions")
+                .description("Proceed if all permissions have been granted.")
                 .build());
     }
 
     @Override
     public void onFinish() {
         super.onFinish();
+
+        AppController.getInstance().getSessionManager().setIntro(true);
 
         Intent intent = new Intent(IntroActivity.this, Login.class);
         startActivity(intent);
