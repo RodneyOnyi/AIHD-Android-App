@@ -35,7 +35,7 @@ public class IntroActivity extends MaterialIntroActivity {
         addSlide(new CustomSlide());
 
         addSlide(new SlideFragmentBuilder()
-                .backgroundColor(R.color.white)
+                .backgroundColor(R.color.light_green)
                 .buttonsColor(R.color.permission_buttons)
                 .possiblePermissions(new String[]{})
                 .neededPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_NETWORK_STATE})
